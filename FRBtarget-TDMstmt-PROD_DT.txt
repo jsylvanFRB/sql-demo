@@ -1,0 +1,7 @@
+Declare @PROD_DT datetime
+select @PROD_DT=(PROD_DT) from dbo.TDMstatements
+If @PROD_DT > getdate() - 2000
+  Select 'All OK'
+Else
+  Select @PROD_DT
+
